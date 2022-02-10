@@ -1,3 +1,6 @@
+# Endlessly plays the Mission Impossible theme.
+# https://www.reddit.com/r/sysadmin/comments/boycgg/comment/enmmkt3/?utm_source=share&utm_medium=web2x&context=3
+
 while($true){
 [console]::beep(784,150)
 Start-Sleep -m 300
