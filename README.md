@@ -1,2 +1,2 @@
 # PowerShell Scripts
-A collection of useful (and not so useful) PowerShell scripts.
+A collection of useful (and some perhaps not so useful) PowerShell scripts.
