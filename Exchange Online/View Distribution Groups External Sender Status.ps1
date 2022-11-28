@@ -1,5 +1,0 @@
-Connect-ExchangeOnline
-
-Get-DistributionGroup | Select-Object DisplayName,PrimarySMTPAddress,RequireSenderAuthenticationEnabled
-
-Disconnect-ExchangeOnline
