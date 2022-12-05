@@ -6,8 +6,6 @@ Get-DistributionGroup | Where-Object { (Get-DistributionGroupMember $_.Name | Fo
 # List all DstGrps and show if external senders are enabled/disabled for that group
 Get-DistributionGroup | Select-Object DisplayName,PrimarySMTPAddress,RequireSenderAuthenticationEnabled
 
-
-
 # ADD ALLOWED SENDERS TO DSTGRP WHEN ERRORS OCCUR
 #Source: https://microsoftgeek.com/?p=1869
 #
