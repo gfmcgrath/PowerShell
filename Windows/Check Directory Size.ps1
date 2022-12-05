@@ -16,4 +16,4 @@ Add-Member -inputObject $dataObject -memberType NoteProperty -name “foldername
 Add-Member -inputObject $dataObject -memberType NoteProperty -name “foldersizeGb” -value $foldersize
 $dataColl += $dataObject
 }
-$dataColl | Write-Output | Sort-Object foldersizeGb -Descending
+$dataColl | Write-Output | Sort-Object foldersizeGb

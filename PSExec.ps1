@@ -1,0 +1,1 @@
+.\psexec.exe \ServerB -h -s powershell.exe Enable-PSRemoting -Force
