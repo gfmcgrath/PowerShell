@@ -47,7 +47,7 @@ function Get-PSRemoteStatus {
             [PSCustomObject]@{
                 'Computer Name'          =   $_             
                 'Connection Status'     =   $connectionStatus
-                'WinRM Service State'   =   If ($winrmStatus -eq "True") {"Enabled"} else {"Disabled"}
+                'WinRM Service State'   =   If ($winrmStatus -eq "True") {"Enabled"}
                 'PS Remote Check'       =   If ($psremoteStatus -eq "1") {"Pass"}
             }           
 

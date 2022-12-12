@@ -2,6 +2,7 @@
 
 Get-MessageTrace -StartDate (Get-Date).Adddays(-10) -EndDate (Get-Date) -RecipientAddress
 
+Get-MessageTrace -StartDate (Get-Date).AddDays(-1) -EndDate (Get-Date) | Select-Object -First 25
 
 # View specifically Distribution Group acitivity for specified date range (maximum 10 days) this uses the Expanded status property to identify DstGrps
 
