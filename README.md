@@ -1,6 +1,21 @@
 # PowerShell Scripts
 A collection of useful (and some perhaps not so useful) PowerShell scripts.
 
+## PowerShell Verisons
+There are 2 versions of PowerShell currently available:
+
+### Windows PowerShell
+This is the version of PowerShell that is pre-installed on all Windows based systems from Windows 10 onwards, and on Windows Server systems. The most recent release version if 5.1. 
+
+This is no longer under active development and has been deprecated in favour of the newer, corss-platform PowerShell Core. However there are some cmdlets and modules which will only work in Windows PowerShell, so it is common to have both versions installed at the same time as the two can co-exist.
+
+### PowerShell (formerly PowerShell Core)
+This is designed to be the replacement for Windows PowerShell. It is cross-platform and includes updated and new cmdlets not available in Windows PowerShell. It is actively developed under an Open Source license. The current release version is 7.
+
+Some modules only work with **Windows PowerShell** - these are noted below.
+
+### Windo
+
 ## Active Directory
 To run the Active Directory scripts, the following are required:
 
@@ -22,3 +37,5 @@ At time of writing, there are now 3 different ways of interacting with AzureAD v
 The MSONline Module is now deprecated. AzureAD is being phased out in favour using MS Graph API, however these scripts are still built using the AzureAD module. To install this, run the following in an Admin PowerShell window:
 
 `Install-Module AzureAD`
+
+This module is onply compatible with Windows PowerShell 5.1, NOT PowerShell 7.
