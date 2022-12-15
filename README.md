@@ -78,3 +78,11 @@ https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/
 You will also be required to register an Azure AD application in your tenant in order to be able to authenticate to use the commands in this module. This is a one-time setup that applies to the entire tenant:
 `Register-PnPManagementShellAccess`
 Refer to the guide for further instructions on registering the AzureAD application: https://pnp.github.io/powershell/articles/authentication.html
+
+
+### Microsoft Teams
+The Microsoft Teams PowerShell module is only compatible in Windows PowerShell 5.1.
+
+`Install-Module -Name MicrosoftTeams`
+
+Reference: https://learn.microsoft.com/en-us/powershell/teams
