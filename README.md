@@ -1,7 +1,10 @@
 # PowerShell Scripts
 A collection of useful (and some perhaps not so useful) PowerShell scripts.
 
-[Active Directory](#active-directory)
+1. [Active Directory](#active-directory)
+2. [AzureAD](#azure-ad)
+3. [Exchange Online](#exchange-online)
+
 
 ## PowerShell Versions
 There are 2 versions of PowerShell currently available:
