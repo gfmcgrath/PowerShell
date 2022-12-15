@@ -44,12 +44,8 @@ This module is only compatible with Windows PowerShell 5.1, NOT PowerShell 7.
 ### Exchange Online
 The current release version of Exchange Online Management is v3. This works with PowerShell 7.
 
-#### Install
+**Install**
 `Install-Module -Name ExchangeOnlineManagement`
 
-#### Documentation
+**Documentation**
 https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps
-
-| --- | --- |
-| Install | `Install-Module -Name ExchangeOnlineManagement` |
-| Documentation | https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps
