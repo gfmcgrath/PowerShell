@@ -35,54 +35,54 @@ To run the Active Directory scripts, the following are required:
 2. Appropriate domain level permissions to perform the commands (e.g. Domain Administrator).
 3. Have connectivity to a Domain Controller.
 
-To install the RSAT Tools, in Windows go to **Settings -> Apps -> Manage Optional Features -> Add a feature** and add the required features. At a minimum you should add **RSAT: Active Directory Domain Services and Lightweight Directory Services Tools**
+To install the RSAT Tools, in Windows go to **Settings -> Apps -> Manage Optional Features -> Add a feature** and add the required features.
+
+At a minimum you should add **RSAT: Active Directory Domain Services and Lightweight Directory Services Tools**
 
 ### Azure AD
-To use Azure AD related scripts you will require the AzureAD PowerShell module.
-
 At time of writing, there are now 3 different ways of interacting with AzureAD via PowerShell:
 
 1. MSOnline Module
 2. AzureAD Module
 3. MS Graph
 
-The MSONline Module is now deprecated. AzureAD is being phased out in favour using MS Graph API, however these scripts are still built using the AzureAD module. To install this, run the following in an Admin PowerShell window:
-
-`Install-Module AzureAD`
+The MSONline Module is now deprecated. AzureAD is being phased out in favour using MS Graph API, however these scripts are still built using the AzureAD module so this is the one you should install:
+`Install-Module -Name AzureAD`
 
 This module is only compatible with Windows PowerShell 5.1, NOT PowerShell 7.
 
-### Exchange Online
-The current release version of Exchange Online Management is v3. This works with PowerShell 7.
+**Reference:** https://learn.microsoft.com/en-us/powershell/module/azuread
 
-**Install**
+
+### Exchange Online
+The current release version of Exchange Online Management module is v3. This works with PowerShell 7 and should be the one used:
 `Install-Module -Name ExchangeOnlineManagement`
 
-**Documentation**
-https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps
+**Reference:** https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps
 
 
 ### SharePoint Online
+#### SharePoint Online Management Shell
 The SharePoint Online Management Shell provides PowerShell access to items available in the SharePoint Online administration centre. This does not provide direct access to control things such as List Items - they are instead handled via other modules such as SharePoint PnP.
 
-#### SharePoint Online Management Shell
-##### Install
 `Install-Module -Name Microsoft.Online.SharePoint.PowerShell`
-##### Reference
-https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/
+**Reference:** https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/
 
 #### SharePoint PnP
-##### Install
+This gives more access to directly interact with Lists, etc.
 `Install-Module -Name PnP.PowerShell`
 
 You will also be required to register an Azure AD application in your tenant in order to be able to authenticate to use the commands in this module. This is a one-time setup that applies to the entire tenant:
 `Register-PnPManagementShellAccess`
 Refer to the guide for further instructions on registering the AzureAD application: https://pnp.github.io/powershell/articles/authentication.html
 
+**Reference:** https://pnp.github.io/powershell/index.html
+
+
 
 ### Microsoft Teams
-The Microsoft Teams PowerShell module is only compatible in Windows PowerShell 5.1.
-
 `Install-Module -Name MicrosoftTeams`
 
-Reference: https://learn.microsoft.com/en-us/powershell/teams
+The Microsoft Teams PowerShell module is only compatible in Windows PowerShell 5.1.
+
+**Reference:** https://learn.microsoft.com/en-us/powershell/teams
