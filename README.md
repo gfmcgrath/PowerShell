@@ -7,7 +7,7 @@ There are 2 versions of PowerShell currently available:
 ### Windows PowerShell
 This is the version of PowerShell that is pre-installed on all Windows based systems from Windows 10 onwards, and on Windows Server systems. The most recent release version if 5.1. 
 
-This is no longer under active development and has been deprecated in favour of the newer, corss-platform PowerShell Core. However there are some cmdlets and modules which will only work in Windows PowerShell, so it is common to have both versions installed at the same time as the two can co-exist.
+This is no longer under active development and has been deprecated in favour of the newer, cross-platform PowerShell Core. However there are some cmdlets and modules which will only work in Windows PowerShell, so it is common to have both versions installed at the same time as the two can co-exist.
 
 ### PowerShell (formerly PowerShell Core)
 This is designed to be the replacement for Windows PowerShell. It is cross-platform and includes updated and new cmdlets not available in Windows PowerShell. It is actively developed under an Open Source license. The current release version is 7.
@@ -15,7 +15,7 @@ This is designed to be the replacement for Windows PowerShell. It is cross-platf
 Some modules only work with **Windows PowerShell** - these are noted below.
 
 ## PowerShell Modules
-The below sections detail the modules required to run the scripts included in this repository. They are organised according to the product they relate to. It is neccessary to have these modules installed and loaded into your sessions for the scripts to run.
+The below sections detail the modules required to run the scripts included in this repository. They are organised according to the product they relate to. It is necessary to have these modules installed and loaded into your sessions for the scripts to run.
 
 ### Active Directory
 To run the Active Directory scripts, the following are required:
@@ -39,4 +39,16 @@ The MSONline Module is now deprecated. AzureAD is being phased out in favour usi
 
 `Install-Module AzureAD`
 
-This module is onply compatible with Windows PowerShell 5.1, NOT PowerShell 7.
+This module is only compatible with Windows PowerShell 5.1, NOT PowerShell 7.
+
+### Exchange Online
+The current release version of Exchange Online Management is v3. This works with PowerShell 7.
+
+To install:
+
+`Install-Module -Name ExchangeOnlineManagement`
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
