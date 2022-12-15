@@ -65,7 +65,16 @@ https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell
 ### SharePoint Online
 The SharePoint Online Management Shell provides PowerShell access to items available in the SharePoint Online administration centre. This does not provide direct access to control things such as List Items - they are instead handled via other modules such as SharePoint PnP.
 
-| Module                                | Install                                                       | Reference                                                                  |
-| ---                                   | ---                                                           | ---                                                                        |
-| SharePoint Online Management Shell    | `Install-Module -Name Microsoft.Online.SharePoint.PowerShell` | https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/ |
-| SharePoint PnP                        | https://pnp.github.io/powershell/                             | https://pnp.github.io/powershell/index.html                                |
+#### SharePoint Online Management Shell
+##### Install
+`Install-Module -Name Microsoft.Online.SharePoint.PowerShell`
+##### Reference
+https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/
+
+#### SharePoint PnP
+##### Install
+`Install-Module -Name PnP.PowerShell`
+
+You will also be required to register an Azure AD application in your tenant in order to be able to authenticate to use the commands in this module. This is a one-time setup that applies to the entire tenant:
+`Register-PnPManagementShellAccess`
+Refer to the guide for further instructions on registering the AzureAD application: https://pnp.github.io/powershell/articles/authentication.html
