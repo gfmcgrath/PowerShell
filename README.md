@@ -50,7 +50,6 @@ The current release version of Exchange Online Management is v3. This works with
 #### Documentation
 https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps
 
-|  |  |
 | --- | --- |
 | Install | `Install-Module -Name ExchangeOnlineManagement` |
 | Documentation | https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps
