@@ -48,7 +48,4 @@ To install:
 
 `Install-Module -Name ExchangeOnlineManagement`
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+**Documentation:** (https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps)
