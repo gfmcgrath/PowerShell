@@ -60,3 +60,12 @@ The current release version of Exchange Online Management is v3. This works with
 
 **Documentation**
 https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps
+
+
+### SharePoint Online
+The SharePoint Online Management Shell provides PowerShell access to items available in the SharePoint Online administration centre. This does not provide direct access to control things such as List Items - they are instead handled via other modules such as SharePoint PnP.
+
+| Module                                | Install                                                       | Reference                                                                  |
+| ---                                   | ---                                                           | ---                                                                        |
+| SharePoint Online Management Shell    | `Install-Module -Name Microsoft.Online.SharePoint.PowerShell` | https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/ |
+| SharePoint PnP                        | https://pnp.github.io/powershell/                             | https://pnp.github.io/powershell/index.html                                |
