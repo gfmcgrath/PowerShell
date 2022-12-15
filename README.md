@@ -16,8 +16,11 @@ A collection of useful (and some perhaps not so useful) PowerShell scripts.
     5. [Microsoft Teams](#microsoft-teams)
 
 
+
 ## PowerShell Versions
-There are 2 versions of PowerShell currently available:
+There are 2 versions of PowerShell currently available.
+
+Some modules only work with **Windows PowerShell** - these are noted in their relevant sections.
 
 ### Windows PowerShell
 This is the version of PowerShell that is pre-installed on all Windows based systems from Windows 10 onwards, and on Windows Server systems. The most recent release version if 5.1. 
@@ -27,10 +30,13 @@ This is no longer under active development and has been deprecated in favour of 
 ### PowerShell (formerly PowerShell Core)
 This is designed to be the replacement for Windows PowerShell. It is cross-platform and includes updated and new cmdlets not available in Windows PowerShell. It is actively developed under an Open Source license. The current release version is 7.
 
-Some modules only work with **Windows PowerShell** - these are noted below.
+**Installation Guide:** https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3
+
+
 
 ## PowerShell Modules
 The below sections detail the modules required to run the scripts included in this repository. They are organised according to the product they relate to. It is necessary to have these modules installed and loaded into your sessions for the scripts to run.
+
 
 ### Active Directory
 To run the Active Directory scripts, the following are required:
@@ -42,6 +48,7 @@ To run the Active Directory scripts, the following are required:
 To install the RSAT Tools, in Windows go to **Settings -> Apps -> Manage Optional Features -> Add a feature** and add the required features.
 
 At a minimum you should add **RSAT: Active Directory Domain Services and Lightweight Directory Services Tools**
+
 
 ### Azure AD
 At time of writing, there are now 3 different ways of interacting with AzureAD via PowerShell:
@@ -81,7 +88,6 @@ You will also be required to register an Azure AD application in your tenant in 
 Refer to the guide for further instructions on registering the AzureAD application: https://pnp.github.io/powershell/articles/authentication.html
 
 **Reference:** https://pnp.github.io/powershell/index.html
-
 
 
 ### Microsoft Teams
