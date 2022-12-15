@@ -1,1 +1,0 @@
-To run Exchnage Online commands you will need the EXO PowerShell modules installed: https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell
