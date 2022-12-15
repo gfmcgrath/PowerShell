@@ -4,11 +4,12 @@ A collection of useful (and some perhaps not so useful) PowerShell scripts.
 ## Contents
 
 1. [PowerShell Versions](#powershell-versions)
-   1. [Windows PowerShell](#windows-powershell)
-   2. [PowerShell (Core)](#powershell-formerly-powershell-core)
-2. [Active Directory](#active-directory)
-2. [AzureAD](#azure-ad)
-3. [Exchange Online](#exchange-online)
+    1. [Windows PowerShell](#windows-powershell)
+    2. [PowerShell (Core)](#powershell-formerly-powershell-core)
+2. [PowerShell Modules](#powershell-modules)
+    1. [Active Directory](#active-directory)
+    2. [AzureAD](#azure-ad)
+    3. [Exchange Online](#exchange-online)
 
 
 ## PowerShell Versions
