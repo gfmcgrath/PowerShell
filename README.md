@@ -1,7 +1,7 @@
 # PowerShell Scripts
 A collection of useful (and some perhaps not so useful) PowerShell scripts.
 
-## PowerShell Verisons
+## PowerShell Versions
 There are 2 versions of PowerShell currently available:
 
 ### Windows PowerShell
@@ -14,9 +14,10 @@ This is designed to be the replacement for Windows PowerShell. It is cross-platf
 
 Some modules only work with **Windows PowerShell** - these are noted below.
 
-### Windo
+## PowerShell Modules
+The below sections detail the modules required to run the scripts included in this repository. They are organised according to the product they relate to. It is neccessary to have these modules installed and loaded into your sessions for the scripts to run.
 
-## Active Directory
+### Active Directory
 To run the Active Directory scripts, the following are required:
 
 1. Remote Server Administration Tools (RSAT) installed on the PC you are running them from.
@@ -25,7 +26,7 @@ To run the Active Directory scripts, the following are required:
 
 To install the RSAT Tools, in Windows go to **Settings -> Apps -> Manage Optional Features -> Add a feature** and add the required features. At a minimum you should add **RSAT: Active Directory Domain Services and Lightweight Directory Services Tools**
 
-## Azure AD
+### Azure AD
 To use Azure AD related scripts you will require the AzureAD PowerShell module.
 
 At time of writing, there are now 3 different ways of interacting with AzureAD via PowerShell:
