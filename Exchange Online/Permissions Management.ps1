@@ -8,4 +8,4 @@
     Get-Mailbox | Get-RecipientPermission -Trustee 'andres.gongora@millbrook.co.nz'
 
 # Add Send As Permissions for a user to a mailbox
-    Add-RecipientPermission "<mailbox>" -AccessRights SendAs -Trustee "<user>"
+    Add-RecipientPermission "<mailbox>" -AccessRights SendAs -Trustee "<user>"    
