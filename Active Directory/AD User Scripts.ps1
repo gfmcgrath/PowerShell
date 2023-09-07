@@ -16,3 +16,6 @@ Get-ADUser -Filter "-not memberof -RecursiveMatch '$dn'" | Select-Object Name | 
 
 # COUNT ACTIVE AD USER ACCOUNTS
 (Get-ADUser -Filter 'enabled -eq "true"').count
+
+# GET LAST LOGGED-IN USER OF DOMAIN COMPUTER
+Get-ChildItem \\WORKSTATION_NAME\c$\Users | Sort-Object LastWriteTime | Select-Object -Last 1
