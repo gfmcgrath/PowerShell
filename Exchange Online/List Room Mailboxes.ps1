@@ -1,1 +1,0 @@
-Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails RoomMailbox | Select-Object DisplayName,Office,ResourceCapacity | Sort-Object Office | FT

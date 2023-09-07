@@ -1,10 +1,8 @@
 # Shows the distribution groups that a particular user belongs to.
 Get-DistributionGroup -ResultSize Unlimited | Where-Object { (Get-DistributionGroupMember $_.Name | ForEach-Object {$_.PrimarySmtpAddress}) -contains "user@domain.com"}
 
-
 # List all DstGrps and show if external senders are enabled/disabled for that group
 Get-DistributionGroup | Select-Object DisplayName,PrimarySMTPAddress,RequireSenderAuthenticationEnabled
-
 
 # ADD ALLOWED SENDERS TO DSTGRP WHEN ERRORS OCCUR
 #Source: https://microsoftgeek.com/?p=1869
