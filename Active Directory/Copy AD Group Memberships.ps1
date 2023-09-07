@@ -1,0 +1,1 @@
+Get-ADUser -Identity 'source_user' -Properties memberof | Select-Object -ExpandProperty memberof |  Add-ADGroupMember -Members 'destination_user' 

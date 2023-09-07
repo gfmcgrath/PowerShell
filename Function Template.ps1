@@ -34,9 +34,9 @@ function Verb-Noun {
     PSCustomObject
 
 .NOTES
-    Author:  Mike F Robbins
-    Website: http://mikefrobbins.com
-    Twitter: @mikefrobbins
+    Author:  
+    Website: 
+    Twitter: 
 #>
 
 }

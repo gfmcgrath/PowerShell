@@ -1,17 +1,18 @@
-# Get all users, computers, and service accounts that are disabled
-Search-ADAccount -AccountDisabled | Select-Object Name,ObjectClass | Sort-Object ObjectClass | Format-Table -AutoSize
+# FIND AD USER BY SAMACCOUNTNAME
+Get-AdUser -Identity "user" | Select-Object Name,Enabled
 
-# Get only disabled user accounts
-Search-ADAccount -AccountDisabled -UsersOnly | Select-Object Name,ObjectClass | Sort-Object ObjectClass | Format-Table -AutoSize
+# FIND AD USER BY DISPLAY NAME
+Get-AdUser -Filter {Name -like '*username*'} | Select-Object Name,sAMAccountName
 
-# Get all locked out accounts
-Search-ADAccount -LockedOut | Select-Object Name,ObjectClass | Sort-Object ObjectClass | Format-Table -AutoSize
+# FIND AD USER USING PROPERTY FILTERING
+Get-AdUser -Properties * -Filter {'Property' -like "*string*"}
 
-# View expiry date for all user accounts
-Get-ADUser -Filter {Enabled -eq $True -and PasswordNeverExpires -eq $False} -Properties "DisplayName", "msDS-UserPasswordExpiryTimeComputed" | Select-Object -Property "Displayname",@{Name="ExpiryDate";Expression={[datetime]::FromFileTime($_."msDS-UserPasswordExpiryTimeComputed")}} | Sort-Object ExpiryDate
+# LIST GROUP MEMBERSHIPS
+Get-ADPrincipalGroupMembership "user" | Select-Object Name | Sort-Object Name
 
-# View expiry date for a specific user
-Get-ADUser -Filter 'Name -like "<USERNAME>"' -Properties "DisplayName", "msDS-UserPasswordExpiryTimeComputed" | Select-Object -Property "Displayname",@{Name="ExpiryDate";Expression={[datetime]::FromFileTime($_."msDS-UserPasswordExpiryTimeComputed")}}
+# LIST USERS _NOT_ IN A GROUP
+$dn = (Get-ADGroup 'AD_Group_Name').DistinguishedName
+Get-ADUser -Filter "-not memberof -RecursiveMatch '$dn'" | Select-Object Name | Sort-Object Name | Format-Table
 
-# Get Count of Active AD User Accounts
-(Get-ADUser -filter 'enabled -eq "true"').count
+# COUNT ACTIVE AD USER ACCOUNTS
+(Get-ADUser -Filter 'enabled -eq "true"').count

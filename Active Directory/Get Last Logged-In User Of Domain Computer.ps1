@@ -1,0 +1,1 @@
+Get-ChildItem \\WORKSTATION_NAME\c$\Users | Sort-Object LastWriteTime | Select-Object -Last 1
