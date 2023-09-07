@@ -1,0 +1,1 @@
+Get-Mailbox -ResultSize unlimited -Filter{(RecipientTypeDetails -eq 'RoomMailbox')} | Get-MailboxCalendarConfiguration -WarningAction:SilentlyContinue | Sort-Object Identity
