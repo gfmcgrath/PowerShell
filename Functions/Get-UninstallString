@@ -1,0 +1,25 @@
+# Get-UninstallString
+# v1.0
+# Gary McGrath
+# 2024-07-23
+
+function Get-UninstallString {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory=$true)]
+        [string]$Name
+    )
+
+    begin {
+        # Initialization code goes here
+    }
+
+    process {
+        # Code to process each item goes here
+        Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall, HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall | Get-ItemProperty | Where-Object { $_.DisplayName -match "$Name" } | Select-Object -Property DisplayName, UninstallString
+    }
+
+    end {
+        # Cleanup code goes here
+    }
+}
