@@ -1,4 +1,4 @@
-function Write-PSLog {
+function Write-Log {
     <#
     .SYNOPSIS
     Writes conent to a log file to be used as part of PowerShell scripts.
@@ -19,7 +19,7 @@ function Write-PSLog {
     Optionally specify the root log folder. The default is C:\PSLogs.
 
     .EXAMPLE
-    Write-PSLog -Message "This is a message." -Level Information -LogName TestLog
+    Write-Log -Message "This is a message." -Level Information -LogName TestLog
 
     .OUTPUTS
     None.
